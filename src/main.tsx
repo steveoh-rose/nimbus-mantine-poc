@@ -3,7 +3,7 @@ import { createRoot } from "react-dom/client";
 import { MantineProvider } from "@mantine/core";
 import { BrowserRouter } from "react-router";
 import App from "./App.tsx";
-import { theme } from "./ui/theme.ts";
+import { theme } from "@/theme";
 import "@mantine/core/styles.css";
 
 createRoot(document.getElementById("root")!).render(

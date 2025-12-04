@@ -13,12 +13,17 @@ import {
 import { NavItem } from "./NavItem";
 import { ConsoleConnectLogo } from "@/ui/NavBar/ConsoleConnectLogo";
 import { People } from "@console/nimbus-assets/icons/brand"; // Assuming this works or use an SVG
-import { ChevronDown, Help, Search } from "@console/nimbus-assets/icons/app";
-import styles from "./NavBar.module.scss";
+import {
+  ChevronDown,
+  Help,
+  HelpOutline,
+  Search,
+} from "@console/nimbus-assets/icons/app";
+import classes from "./NavBar.module.scss";
 
 export const NavBar = () => {
   return (
-    <Box component="nav" className={styles.navbar}>
+    <Box component="nav" className={classes.navbar}>
       <Group justify="space-between" h="100%">
         <Group gap="xl">
           <UnstyledButton component="a" href="/">
@@ -33,7 +38,6 @@ export const NavBar = () => {
                   openDelay={50}
                   closeDelay={100}
                   shadow="md"
-                  withArrow
                   arrowSize={12}
                   position="bottom-start"
                 >
@@ -57,41 +61,31 @@ export const NavBar = () => {
 
         {/* RIGHT SIDE: Icons & Profile */}
         <Group gap="md">
-          <ActionIcon variant="subtle" color="gray" radius="xl" size="lg">
-            <Search width={20} />
+          <ActionIcon variant="subtle" color="slate" radius="xl" size="xl">
+            <Search width={20} height={20} />
           </ActionIcon>
 
-          <ActionIcon variant="subtle" color="gray" radius="xl" size="lg">
-            <Help width={20} />
+          <ActionIcon variant="subtle" color="slate" radius="xl" size="xl">
+            <HelpOutline width={20} height={20} />
           </ActionIcon>
 
-          {/* USER PROFILE CARD */}
           <HoverCard
             openDelay={0}
             closeDelay={200}
             position="bottom-end"
             shadow="lg"
-            withArrow
           >
             <HoverCard.Target>
-              {/* WRAPPER FOR GRADIENT RING
-                 Mantine doesn't have `_after` props. We use a wrapping Box for the ring.
-              */}
               <Box
                 style={{
                   position: "relative",
                   display: "inline-block",
-                  padding: 3, // Space for the ring
+                  padding: 3,
                   borderRadius: "9999px",
                   cursor: "pointer",
-                  // The gradient logic via background
                   background: "transparent",
                   transition: "all 0.2s ease",
                 }}
-                // We use sx or className for hover styles usually,
-                // but here is inline hover logic via data attributes if needed,
-                // or easier: just rely on the component being clean.
-                // For the "Ring on Hover":
                 onMouseEnter={(e) => {
                   e.currentTarget.style.background =
                     "linear-gradient(to right, var(--mantine-color-ruby-4), var(--mantine-color-lavender-5))";
@@ -115,23 +109,16 @@ export const NavBar = () => {
                     radius="xl"
                     size="md"
                     style={{ border: "2px solid var(--bg-panel)" }}
-                  />
+                  >
+                    AP
+                  </Avatar>
                 </Indicator>
               </Box>
             </HoverCard.Target>
 
             <HoverCard.Dropdown p="lg" style={{ minWidth: 300 }}>
               <Group align="flex-start" gap="md">
-                {/* Profile Icon */}
-                <ThemeIcon
-                  size={40}
-                  radius="md"
-                  variant="light"
-                  color="lavender"
-                >
-                  <People width={24} height={24} />
-                </ThemeIcon>
-
+                <People width={80} height={80} />
                 <Box>
                   <Title order={4} mb={4}>
                     Account

@@ -1,5 +1,4 @@
 import type { MantineColorsTuple } from "@mantine/core";
-import { createTheme } from "@mantine/core";
 
 const graphite: MantineColorsTuple = [
   "#f9f9f9", // 0 (50)
@@ -131,51 +130,27 @@ const ruby: MantineColorsTuple = [
   "#560000", // 9
 ];
 
-// 2. Create the Theme Instance
-export const theme = createTheme({
-  // Define the custom palettes
-  colors: {
-    graphite,
-    stone,
-    slate,
-    sky,
-    lavender,
-    ocean,
-    emerald,
-    gold,
-    amber,
-    ruby,
+export const colors = {
+  graphite,
+  stone,
+  slate,
+  sky,
+  lavender,
+  ocean,
+  emerald,
+  gold,
+  amber,
+  ruby,
 
-    // OVERRIDE DEFAULTS (Aliasing)
-    dark: slate, // Dark mode background
-    gray: stone, // Borders, backgrounds, disabled text
-    red: ruby, // Errors, danger buttons
-    green: emerald, // Success states
-    blue: ocean, // Info states, default links
-    yellow: gold, // Warnings
-    orange: amber, // Warnings / Accents
-    cyan: sky, // Accents
-    grape: lavender, // Accents
-    violet: lavender, // (Mapped Slate here as it's the closest cool neutral)
-  },
-  primaryColor: "sky",
-  primaryShade: 5,
-  fontFamily: "Open Sans, sans-serif",
-  fontFamilyMonospace: "Roboto Mono, monospace",
-  headings: {
-    fontFamily: "Montserrat, sans-serif",
-    fontWeight: "700",
-  },
-  components: {
-    Button: {
-      defaultProps: {
-        radius: "sm",
-      },
-    },
-    TextInput: {
-      defaultProps: {
-        radius: "sm",
-      },
-    },
-  },
-});
+  // OVERRIDE DEFAULTS (Aliasing)
+  dark: slate, // Dark mode background
+  gray: stone, // Borders, backgrounds, disabled text
+  red: ruby, // Errors, danger buttons
+  green: emerald, // Success states
+  blue: ocean, // Info states, default links
+  yellow: gold, // Warnings
+  orange: amber, // Warnings / Accents
+  cyan: sky, // Accents
+  grape: lavender, // Accents
+  violet: lavender, // (Mapped Slate here as it's the closest cool neutral)
+};

@@ -1,8 +1,12 @@
 .navbar {
-  padding: var(--mantine-spacing-lg);
+  padding-top: var(--mantine-spacing-md);
+  padding-bottom: var(--mantine-spacing-md);
+  padding-left: var(--mantine-spacing-lg);
+  padding-right: var(--mantine-spacing-lg);
   position: sticky;
   top: 0;
-  border-bottom: 1px solid var(--border-subtle);
-  background-color: var(--bg-panel);
+  background-color: var(--mantine-color-white);
+  border-bottom: 1px solid
+    light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
   z-index: 100;
 }
