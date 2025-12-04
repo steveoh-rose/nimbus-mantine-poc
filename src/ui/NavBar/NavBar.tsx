@@ -8,14 +8,12 @@ import {
   UnstyledButton,
   Indicator,
   Title,
-  ThemeIcon,
 } from "@mantine/core";
 import { NavItem } from "./NavItem";
 import { ConsoleConnectLogo } from "@/ui/NavBar/ConsoleConnectLogo";
 import { People } from "@console/nimbus-assets/icons/brand"; // Assuming this works or use an SVG
 import {
   ChevronDown,
-  Help,
   HelpOutline,
   Search,
 } from "@console/nimbus-assets/icons/app";
@@ -59,7 +57,6 @@ export const NavBar = () => {
           </Group>
         </Group>
 
-        {/* RIGHT SIDE: Icons & Profile */}
         <Group gap="md">
           <ActionIcon variant="subtle" color="slate" radius="xl" size="xl">
             <Search width={20} height={20} />
