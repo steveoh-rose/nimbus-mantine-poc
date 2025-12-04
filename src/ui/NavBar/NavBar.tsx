@@ -9,7 +9,6 @@ import {
   Indicator,
   Title,
   ThemeIcon,
-  rem,
 } from "@mantine/core";
 import { NavItem } from "./NavItem";
 import { ConsoleConnectLogo } from "@/ui/NavBar/ConsoleConnectLogo";
@@ -21,7 +20,6 @@ export const NavBar = () => {
   return (
     <Box component="nav" className={styles.navbar}>
       <Group justify="space-between" h="100%">
-        {/* LEFT SIDE: Logo & Navigation */}
         <Group gap="xl">
           <UnstyledButton component="a" href="/">
             <ConsoleConnectLogo style={{ width: 40, height: 40 }} />

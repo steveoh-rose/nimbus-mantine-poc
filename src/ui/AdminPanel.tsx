@@ -1,4 +1,4 @@
-import { Button, Drawer, Stack, Text, rem } from "@mantine/core";
+import { Button, Drawer, Stack } from "@mantine/core";
 import { useDisclosure, useHotkeys } from "@mantine/hooks";
 import { Check } from "@console/nimbus-assets/icons/app"; // Keeping your existing icon
 import { useLocation, useNavigate } from "react-router";
