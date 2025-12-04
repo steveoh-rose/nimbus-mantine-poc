@@ -1,0 +1,8 @@
+.navbar {
+  padding: var(--mantine-spacing-lg);
+  position: sticky;
+  top: 0;
+  border-bottom: 1px solid var(--border-subtle);
+  background-color: var(--bg-panel);
+  z-index: 100;
+}
